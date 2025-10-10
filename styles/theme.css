@@ -453,3 +453,231 @@
 /* Reveal animation hook reuse */
 .teamCard.reveal{opacity:0; transform:translateY(16px);} 
 .teamCard.reveal.in{opacity:1; transform:none; transition:.6s cubic-bezier(.22,1,.36,1);} 
+
+/* ===== FOOTER RESPONSIVE STYLES ===== */
+
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .flex-footer {
+    padding-top: 30px;
+    gap: 3rem;
+  }
+  
+  .flex-footer > div:first-child img {
+    width: 110px !important;
+    height: 110px !important;
+  }
+  
+  .flex-footer h2 {
+    font-size: 1.75rem;
+  }
+  
+  .flex-footer h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  .flex-footer {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 20px;
+  }
+  
+  .flex-footer > div:first-child {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .flex-footer > div:first-child img {
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 1rem;
+  }
+  
+  .flex-footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .flex-footer p {
+    font-size: 0.85rem !important;
+  }
+  
+  .flex-footer > div:last-child {
+    text-align: center !important;
+  }
+  
+  .flex-footer .justify-end {
+    justify-content: center !important;
+  }
+  
+  .flex-footer h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+  .flex-footer > div:first-child img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .flex-footer h2 {
+    font-size: 1.25rem;
+  }
+  
+  .flex-footer h3 {
+    font-size: 0.95rem;
+  }
+  
+  .flex-footer p {
+    font-size: 0.8rem !important;
+  }
+  
+  .flex-footer .space-x-4 {
+    gap: 1rem;
+  }
+  
+  .flex-footer svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+/* Footer общие стили для всех размеров */
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 0 2rem !important;
+  }
+  
+  footer .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  
+  footer .border-t {
+    margin-top: 2rem !important;
+    padding-top: 1.5rem !important;
+  }
+  
+  footer .border-t p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5rem 0 1.5rem !important;
+  }
+  
+  footer .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  footer .border-t {
+    margin-top: 1.5rem !important;
+    padding-top: 1rem !important;
+  }
+  
+  footer .border-t p {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== SERVICE AREAS RESPONSIVE STYLES ===== */
+
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .sectionAreas .container {
+    min-height: 350px !important;
+  }
+  
+  .sectionAreas .reveal:first-child {
+    top: 15px !important;
+    left: 15px !important;
+  }
+  
+  .sectionAreas .sectionTitle {
+    font-size: 1.75rem !important;
+  }
+  
+  .sectionAreas .sectionSub {
+    font-size: 0.95rem !important;
+  }
+  
+  .sectionAreas img {
+    max-width: 280px !important;
+  }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  .sectionAreas .container {
+    flex-direction: column !important;
+    min-height: auto !important;
+    padding: 2rem 1rem !important;
+  }
+  
+  .sectionAreas .reveal:first-child {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    text-align: center !important;
+    margin-bottom: 2rem;
+  }
+  
+  .sectionAreas .sectionTitle {
+    text-align: center !important;
+    font-size: 1.5rem !important;
+  }
+  
+  .sectionAreas .sectionSub {
+    text-align: center !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .sectionAreas .reveal:last-child {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sectionAreas img {
+    max-width: 220px !important;
+    margin: 0 auto;
+  }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+  .sectionAreas .container {
+    padding: 1.5rem 0.75rem !important;
+  }
+  
+  .sectionAreas .reveal:first-child {
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionAreas .sectionTitle {
+    font-size: 1.25rem !important;
+  }
+  
+  .sectionAreas .sectionSub {
+    font-size: 0.85rem !important;
+  }
+  
+  .sectionAreas img {
+    max-width: 160px !important;
+  }
+} 
