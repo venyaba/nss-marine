@@ -107,7 +107,7 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section id="hero" className="heroWrap">
-        <video className="heroVideo" autoPlay muted loop playsInline><source src="/promo.mp4" type="video/mp4"/></video>
+        <video className="heroVideo" autoPlay muted loop playsInline><source src="/videos/promo.MP4" type="video/mp4"/></video>
         <div className="heroOverlay"></div>
         <div className="heroInner reveal">
           <h1 className="heroTitle">Nautical Survey Solutions</h1>
