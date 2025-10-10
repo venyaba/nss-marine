@@ -54,7 +54,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
-        <div className={styles.logo}>
+        <a href="#hero" className={styles.logo}>
               <img 
                 src={getLogoSrc()} 
                 alt={content.brand} 
@@ -66,7 +66,7 @@ export default function Header() {
           <span className={styles.logoText}>
             {content.brand}
           </span>
-        </div>
+        </a>
         
         <div className={`${styles.navItems} ${mobileMenuOpen ? styles.mobileOpen : ''}`}>
           {/* Кнопка закрытия внутри мобильного меню */}
