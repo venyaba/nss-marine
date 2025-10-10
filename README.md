@@ -1,63 +1,150 @@
-# NSS Marine Services
+# NSS Marine Services Website
 
-Professional marine survey services landing page built with Next.js 14 and CSS Modules.
+A modern, responsive website for Nautical Survey Solutions built with Next.js 14, featuring dynamic logo switching, marine-themed design, and smooth animations.
 
-## Features
+## 🚀 Features
 
-- 🚢 Marine industry focused design
-- 📱 Responsive layout
-- ♿ WCAG AA accessibility compliance
-- 🎨 CSS Modules for styling
-- ⚡ Next.js App Router
-- 🎬 Video background hero section
+- **Dynamic Logo Switching**: Automatically changes logo based on background (dark/light sections)
+- **Marine Theme**: Ocean-inspired color palette and design elements
+- **Responsive Design**: Mobile-first approach with smooth animations
+- **SEO Optimized**: Meta tags, OpenGraph, Twitter cards, robots.txt, sitemap.xml
+- **Performance**: Optimized images, lazy loading, font preloading
+- **Modern Stack**: Next.js 14 App Router, TypeScript, CSS Modules
+- **Interactive Elements**: Scroll animations, contact form with honeypot protection
 
-## Getting Started
+## 🛠️ Tech Stack
 
-1. Install dependencies:
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: CSS Modules + Global CSS
+- **Icons**: Custom SVG icons
+- **Animations**: IntersectionObserver-based reveal effects
+- **Form Handling**: API routes with spam protection
+
+## 📁 Project Structure
+
+```
+├── app/
+│   ├── (site)/
+│   │   ├── layout.tsx      # Root layout with header/footer
+│   │   ├── page.tsx        # Main page with all sections
+│   │   ├── Header.tsx      # Dynamic header component
+│   │   └── Header.module.css
+│   ├── api/contact/        # Contact form API
+│   └── globals.css         # Global styles
+├── components/
+│   ├── TeamSection.tsx     # Team section component
+│   └── ui/                 # Reusable UI components
+├── hooks/
+│   ├── useReveal.ts        # Scroll animation hook
+│   └── useActiveSection.ts # Active navigation hook
+├── lib/
+│   └── content.ts          # Content configuration
+├── public/                 # Static assets
+└── styles/
+    └── theme.css           # CSS variables and utilities
+```
+
+## 🎨 Sections
+
+1. **Hero**: Video background with call-to-action buttons
+2. **Benefits**: Why choose NSS with animated cards
+3. **Services**: Comprehensive marine survey services
+4. **Process**: Visual process gallery with images
+5. **Service Areas**: German ports coverage
+6. **Team**: Meet the experts with LinkedIn integration
+7. **Contact**: Contact form with validation
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd nss
+```
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Run the development server:
+3. Run the development server:
 ```bash
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Project Structure
+### Build for Production
 
-```
-├── app/
-│   └── (site)/
-│       ├── layout.tsx      # Root layout with navigation
-│       ├── page.tsx        # Home page
-│       └── globals.css      # Global styles
-├── components/
-│   └── ui/                 # Reusable UI components
-├── lib/
-│   └── content.ts          # Content data
-├── styles/
-│   └── theme.css           # CSS variables and utilities
-└── public/                 # Static assets
+```bash
+npm run build
+npm start
 ```
 
-## Customization
+## ⚙️ Configuration
 
-Update the content in `lib/content.ts` to customize:
+Edit `lib/content.ts` to customize:
 - Company information
-- Services offered
+- Services and benefits
+- Team members
 - Contact details
 - Social media links
 
-## Assets
+## 🎯 Key Features Explained
 
-Replace placeholder files in `/public/`:
-- `logo.svg` - Company logo
-- `og.jpg` - Open Graph image (1200x630px)
-- `favicon.ico` - Site favicon
-- `hero.mp4` - Hero background video
+### Dynamic Logo Switching
+The header automatically switches between:
+- `nss-white-wave.png` (for dark backgrounds)
+- `nss.png` (for light backgrounds)
 
-## Styling
+### Scroll Animations
+Uses IntersectionObserver for smooth reveal effects:
+- `.reveal` - fade in from bottom
+- `.revealRight` - slide in from right
+- `.revealDown` - slide down from top
+- `.revealScale` - scale in effect
 
-The project uses CSS Modules and CSS variables defined in `styles/theme.css`. The color palette is optimized for marine industry branding with high contrast for accessibility.
+### Contact Form
+- HTML5 validation
+- Honeypot spam protection
+- API route handling
+- Success/error feedback
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Breakpoints: 768px (md), 1024px (lg)
+- Touch-friendly navigation
+- Optimized images for all devices
+
+## 🔧 Customization
+
+### Colors
+Edit CSS variables in `styles/theme.css`:
+```css
+:root {
+  --bg: #0b1220;
+  --surface: #0f1a2d;
+  --text: #e6edf6;
+  --primary: #4cc9f0;
+  --accent: #a78bfa;
+}
+```
+
+### Content
+Update `lib/content.ts` for all text content and configuration.
+
+## 📄 License
+
+This project is proprietary software for Nautical Survey Solutions.
+
+## 🤝 Support
+
+For support or questions, please contact the development team.
