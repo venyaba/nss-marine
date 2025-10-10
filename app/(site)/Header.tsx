@@ -34,8 +34,8 @@ export default function Header() {
 
   // Определяем, какой логотип показывать
   const getLogoSrc = () => {
-    // Если находимся в секции benefits (светлый фон), показываем темный логотип
-    if (currentSection === 'benefits') {
+    // Если находимся в секциях со светлым фоном, показываем темный логотип
+    if (currentSection === 'benefits' || currentSection === 'contact' || currentSection === 'areas') {
       return '/nss.png';
     }
     // Во всех остальных случаях (темный фон) показываем белый логотип
