@@ -203,7 +203,7 @@ export default function HomePage() {
             <h2 className="sectionTitle" style={{textAlign: 'left', color: '#0a2540'}}>Service Areas</h2>
             <p className="sectionSub" style={{textAlign: 'left', color: '#0a2540'}}>Major German Ports Coverage</p>
           </div>
-          <div className="reveal" style={{position: 'absolute', right: '-50px', top: '50%', transform: 'translateY(-50%)', transitionDelay: '0.2s'}}>
+            <div className="reveal" style={{position: 'absolute', right: '0', top: '50%', transform: 'translateY(-50%)', transitionDelay: '0.2s'}}>
             <img src="/nss.png" alt="NSS Service Areas" style={{maxWidth: '350px', width: '100%', height: 'auto', display: 'block'}} />
           </div>
         </div>
