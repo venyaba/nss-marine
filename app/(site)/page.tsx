@@ -199,11 +199,11 @@ export default function HomePage() {
       {/* Areas Section */}
       <section id="areas" className="section sectionAreas">
         <div className="container" style={{position: 'relative', display: 'flex', alignItems: 'center', minHeight: '400px'}}>
-          <div className="reveal" style={{flex: '0 0 50%', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+          <div className="reveal" style={{position: 'absolute', top: '20px', left: '20px', zIndex: '2'}}>
             <h2 className="sectionTitle" style={{textAlign: 'left', color: '#0a2540'}}>Service Areas</h2>
             <p className="sectionSub" style={{textAlign: 'left', color: '#0a2540'}}>Major German Ports Coverage</p>
           </div>
-          <div className="reveal" style={{position: 'absolute', right: '-100px', top: '50%', transform: 'translateY(-50%)', transitionDelay: '0.2s'}}>
+          <div className="reveal" style={{position: 'absolute', right: '-50px', top: '50%', transform: 'translateY(-50%)', transitionDelay: '0.2s'}}>
             <img src="/nss.png" alt="NSS Service Areas" style={{maxWidth: '350px', width: '100%', height: 'auto', display: 'block'}} />
           </div>
         </div>

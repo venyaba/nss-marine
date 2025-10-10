@@ -84,7 +84,7 @@ export default function RootLayout({
         <footer className="bg-gray-900 text-white py-12 pt-10">
           <div className="container mx-auto px-6">
             {/* Основной контент футера */}
-            <div className="flex items-center justify-around mb-8">
+            <div className="flex-footer items-center mb-8">
               {/* Левая часть: Логотип отцентрированный по отношению к заголовкам */}
               <div className="flex items-center space-x-4">
                 <img 

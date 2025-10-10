@@ -322,7 +322,8 @@
 
 .space-y-2 > * + *{margin-top:0.5rem}
 .mb-6{margin-bottom:1.5rem}
-.flex{display:flex;justify-content:space-around;padding-top:40px}
+.flex{display:flex}
+.flex-footer{display:flex;justify-content:space-around;padding-top:40px}
 .items-start{align-items:flex-start}
 .mr-2{margin-right:0.5rem}
 
