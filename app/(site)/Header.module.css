@@ -144,11 +144,11 @@
   .closeButton {
     display: block;
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: none;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.1);
     border: none;
-    color: var(--muted);
+    color: #ffffff;
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 50%;
@@ -158,7 +158,7 @@
   
   .closeButton:hover {
     color: var(--primary);
-    background: rgba(76, 201, 240, 0.1);
+    background: rgba(76, 201, 240, 0.2);
     transform: rotate(90deg);
   }
   
@@ -202,22 +202,24 @@
     display: block;
   }
   
-  /* Применяем анимацию выезжания слева для планшетов */
+  /* Применяем боковое меню справа для планшетов */
   .navItems {
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(11, 18, 32, 0.98) 0%, rgba(10, 37, 64, 0.98) 100%);
-    backdrop-filter: blur(20px);
+    width: 320px;
+    background: rgba(11, 18, 32, 1);
+    backdrop-filter: blur(12px);
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
-    transform: translateX(-100%);
+    gap: 0;
+    padding: 14rem 0 9rem;
+    transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 100;
-    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+    overflow: visible;
   }
   
   .navItems.mobileOpen {
@@ -226,21 +228,23 @@
   }
   
   .navLink {
-    font-size: 1.75rem;
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .navItems.mobileOpen .navLink {
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    color: #ffffff !important;
     opacity: 1;
-    transform: translateX(0);
+    transform: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   
-  .navItems.mobileOpen .navLink:nth-child(1) { transition-delay: 0.1s; }
-  .navItems.mobileOpen .navLink:nth-child(2) { transition-delay: 0.15s; }
-  .navItems.mobileOpen .navLink:nth-child(3) { transition-delay: 0.2s; }
-  .navItems.mobileOpen .navLink:nth-child(4) { transition-delay: 0.25s; }
+  .navLink:hover {
+    background-color: rgba(76, 201, 240, 0.1);
+    color: var(--primary) !important;
+  }
+  
+  .navLink::before {
+    display: none;
+  }
 }
 
 /* Мобильные устройства (до 768px) */
@@ -256,22 +260,23 @@
   .navItems {
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(11, 18, 32, 0.98) 0%, rgba(10, 37, 64, 0.98) 100%);
-    backdrop-filter: blur(20px);
+    width: 45%;
+    min-width: 280px;
+    max-width: 400px;
+    background: rgba(11, 18, 32, 1);
+    backdrop-filter: blur(12px);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem 1.5rem;
-    transform: translateX(-100%);
+    align-items: stretch;
+    gap: 0;
+    padding: 14rem 0 9rem;
+    transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 100;
-    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+    overflow: visible;
   }
   
   .navItems.mobileOpen {
@@ -279,43 +284,32 @@
   }
   
   .navLink {
-    font-size: 1.35rem;
-    padding: 0.875rem 0;
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-  }
-  
-  .navItems.mobileOpen .navLink {
+    font-size: 1.15rem;
+    font-weight: 500;
+    padding: 1.25rem 2rem;
+    color: #ffffff !important;
     opacity: 1;
-    transform: translateX(0);
-  }
-  
-  /* Задержки для последовательного появления пунктов меню */
-  .navItems.mobileOpen .navLink:nth-child(1) {
-    transition-delay: 0.1s;
-  }
-  
-  .navItems.mobileOpen .navLink:nth-child(2) {
-    transition-delay: 0.15s;
-  }
-  
-  .navItems.mobileOpen .navLink:nth-child(3) {
-    transition-delay: 0.2s;
-  }
-  
-  .navItems.mobileOpen .navLink:nth-child(4) {
-    transition-delay: 0.25s;
-  }
-  
-  /* Усиливаем эффекты на мобильных для лучшей видимости */
-  .navLink::before {
-    height: 3px;
+    transform: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
   }
   
   .navLink:hover {
-    transform: translateY(-3px);
-    text-shadow: 0 0 25px rgba(76, 201, 240, 0.6);
+    background-color: rgba(76, 201, 240, 0.1);
+    color: var(--primary) !important;
+    transform: none;
+    text-shadow: none;
+  }
+  
+  .navLink.active {
+    background-color: rgba(76, 201, 240, 0.15);
+    color: var(--primary) !important;
+  }
+  
+  /* Убираем подчеркивание для мобильного меню */
+  .navLink::before {
+    display: none;
   }
   
   .mobileMenu {
@@ -348,12 +342,13 @@
   }
   
   .navItems {
-    gap: 1.5rem !important;
-    padding: 1.5rem 1rem !important;
+    width: 65%;
+    min-width: 250px;
+    max-width: 320px;
   }
   
   .navLink {
-    font-size: 1.2rem !important;
-    padding: 0.75rem 0 !important;
+    font-size: 1.05rem !important;
+    padding: 1.15rem 1.5rem !important;
   }
 }
