@@ -2,14 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(11, 18, 32, 0.08);
+  background: rgba(11, 18, 32, 1);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
 .scrolled {
-  background: rgba(11, 18, 32, 0.15);
+  background: rgba(11, 18, 32, 1);
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -32,18 +32,23 @@
   transition: opacity 0.2s ease;
 }
 
+.logoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .logo:hover {
   opacity: 0.85;
 }
 
 .logoImage {
-  width: 120px;
-  height: 120px;
+  width: 105px;
+  height: 105px;
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
   border-radius: 8px;
-  mix-blend-mode: multiply;
   filter: contrast(1.2) brightness(1.1);
 }
 
@@ -51,6 +56,13 @@
   font-weight: 600;
   font-size: 1.25rem;
   color: var(--text);
+}
+
+.logoSubtext {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text);
+  text-align: center;
 }
 
 .navItems {
@@ -178,8 +190,8 @@
   }
   
   .logoImage {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
   }
   
   .logoText {
@@ -317,12 +329,16 @@
   }
   
   .logoImage {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
   }
   
   .logoText {
     font-size: 1rem;
+  }
+  
+  .logoSubtext {
+    font-size: 0.7rem;
   }
 }
 
@@ -333,12 +349,16 @@
   }
   
   .logoImage {
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
   }
   
   .logoText {
     font-size: 0.9rem;
+  }
+  
+  .logoSubtext {
+    font-size: 0.65rem;
   }
   
   .navItems {

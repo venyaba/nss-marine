@@ -119,8 +119,75 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section id="about" className="section sectionLight">
+        <div className="container" style={{padding: '0'}}>
+          <div className="text-center reveal">
+            <h2 className="sectionTitle">About Us</h2>
+            <div className="reveal" style={{
+              margin: '32px auto 0',
+              padding: '48px 40px',
+              backgroundColor: 'transparent',
+              boxShadow: '0 2px 4px rgba(10, 37, 64, 0.3), 0 -1px 2px rgba(10, 37, 64, 0.2)',
+              position: 'relative'
+            }}>
+              <div style={{
+                position: 'absolute',
+                bottom: '-20px',
+                right: '-10px',
+                fontSize: '24px',
+                color: '#0a2540',
+                transform: 'rotate(15deg)',
+                zIndex: 10
+              }}>
+                ⚓
+              </div>
+              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: 'rgba(11, 18, 32, 1)'}}>
+                Nautical Survey Solutions is an independent marine surveying company based in Hamburg, Germany, providing professional inspection services across European ports.
+              </p>
+              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: 'rgba(11, 18, 32, 1)'}}>
+                Our team consists of experienced Master Mariners and Marine Engineers with years of hands-on seagoing experience. This dual expertise allows us to deliver accurate, objective, and reliable assessments of vessel condition, cargo operations, and safety compliance.
+              </p>
+              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: 'rgba(11, 18, 32, 1)'}}>
+                We specialize in bunker quantity verification, draft and condition surveys, cargo inspections, hold cleanliness checks, and pre-purchase surveys, ensuring every report meets the highest professional standards.
+              </p>
+              <p style={{fontSize: '18px', lineHeight: '1.6', textAlign: 'justify', color: 'rgba(11, 18, 32, 1)'}}>
+                At Nautical Survey Solutions, we combine technical knowledge, practical experience, and transparency to provide experience you can trust.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="wave"></div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="section sectionLight">
+        <div className="container">
+          <div className="text-center reveal" style={{marginTop: '-40px'}}>
+            <h2 className="sectionTitle" style={{marginBottom: '10px'}}>Our Services</h2>
+            <p className="sectionSub" style={{marginTop: '0', color: '#0a2540'}}>Comprehensive marine survey solutions</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{marginTop: '32px', paddingTop: '32px'}}>
+            {content.services.map((service, index) => (
+              <div key={index} className="card p-8 revealRight" style={{transitionDelay: `${index * 0.15}s`}}>
+                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+                <ul className="space-y-2">
+                  {service.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className="flex items-start">
+                      <span className="text-primary mr-2">✓</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="wave"></div>
+      </section>
+
       {/* Benefits Section */}
-      <section id="benefits" className="section sectionLight">
+      <section id="benefits" className="section sectionLight" style={{padding: '60px 0'}}>
         <div className="container">
           <div className="text-center reveal">
             <h2 className="sectionTitle">Why Choose Us</h2>
@@ -130,7 +197,7 @@ export default function HomePage() {
             {content.benefits.map((benefit, index) => (
               <div key={index} className="card p-8 text-center revealRight" style={{transitionDelay: `${index * 0.15}s`}}>
                 <div className="iconBadge mx-auto mb-4">
-                  <span className="text-2xl">🧭</span>
+                  <span className="text-2xl">⚓</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-muted">{benefit.text}</p>
@@ -141,71 +208,9 @@ export default function HomePage() {
         <div className="wave"></div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="section sectionBlueShip">
-        <div className="container">
-          <div className="text-center reveal">
-            <h2 className="sectionTitle">Our Services</h2>
-            <p className="sectionSub">Comprehensive marine survey solutions</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{marginTop: '32px', paddingTop: '32px', borderTop: '2px solid rgba(255,255,255,0.15)'}}>
-            {content.services.map((service, index) => (
-              <div key={index} className="card p-8 revealRight" style={{transitionDelay: `${index * 0.15}s`}}>
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <ul className="space-y-2 mb-6">
-                  {service.bullets.map((bullet, bulletIndex) => (
-                    <li key={bulletIndex} className="flex items-start">
-                      <span className="text-primary mr-2">✓</span>
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a href="#contact" className="btn btnGhost">
-                  Ask about this service
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="wave"></div>
-      </section>
-
-      {/* Process Section */}
-      <section id="process" className="section sectionProcess">
-        <div className="container">
-          <div className="text-center reveal">
-            <h2 className="sectionTitle">Our Process</h2>
-            <p className="sectionSub">Professional survey services step by step</p>
-          </div>
-          <div className="processGallery">
-            {[
-              { name: 'Bunker Survey', image: '/process/bunker.png' },
-              { name: 'Holds Inspection', image: '/process/holds_ispection.png' },
-              { name: 'On/Off-Hire Survey', image: '/process/on-off_hire.png' },
-              { name: 'Loading / Discharging Supervision', image: '/process/loading.png' }
-            ].map((process, index) => (
-              <div key={index} className="processCard revealScale" style={{transitionDelay: `${index * 0.15}s`}}>
-                <img src={process.image} alt={process.name} className="processImage" loading="lazy" />
-                <div className="processLabel">
-                  <h3 className="processName">{process.name}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="wave"></div>
-      </section>
-
       {/* Areas Section */}
       <section id="areas" className="section sectionAreas">
         <div className="container" style={{position: 'relative', display: 'flex', alignItems: 'center', minHeight: '400px'}}>
-          <div className="reveal" style={{position: 'absolute', top: '20px', left: '20px', zIndex: '2'}}>
-            <h2 className="sectionTitle" style={{textAlign: 'left', color: '#0a2540'}}>Service Areas</h2>
-            <p className="sectionSub" style={{textAlign: 'left', color: '#0a2540'}}>Major German Ports Coverage</p>
-          </div>
-            <div className="reveal" style={{position: 'absolute', right: '0', top: '50%', transform: 'translateY(-50%)', transitionDelay: '0.2s'}}>
-            <img src="/nss.png" alt="NSS Service Areas" style={{maxWidth: '350px', width: '100%', height: 'auto', display: 'block'}} />
-          </div>
         </div>
         <div className="wave"></div>
       </section>

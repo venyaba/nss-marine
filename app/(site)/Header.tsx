@@ -33,20 +33,11 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Определяем, какой логотип показывать
-  const getLogoSrc = () => {
-    // Секции со светлым фоном - показываем темный логотип
-    const lightSections = ['benefits', 'areas', 'contact'];
-    if (lightSections.includes(currentSection)) {
-      return '/nss.png';
-    }
-    // Во всех остальных случаях (темный фон) показываем белый логотип
-    return '/nss-white-wave.png';
-  };
 
   const navItems = [
+    { href: '#about', label: 'About' },
     { href: '#services', label: 'Services' },
-    { href: '#team', label: 'Team' },
+    { href: '#benefits', label: 'Benefits' },
     { href: '#areas', label: 'Areas' },
     { href: '#contact', label: 'Contact' },
   ];
@@ -56,16 +47,21 @@ export default function Header() {
       <nav className={styles.nav}>
         <a href="#hero" className={styles.logo}>
               <img 
-                src={getLogoSrc()} 
+                src="/nss-white-wave.png" 
                 alt={content.brand} 
                 className={styles.logoImage}
             width="48"
             height="48"
             loading="eager"
           />
-          <span className={styles.logoText}>
-            {content.brand}
-          </span>
+          <div className={styles.logoContent}>
+            <span className={styles.logoText}>
+              {content.brand}
+            </span>
+            <span className={styles.logoSubtext}>
+              Experience you can trust
+            </span>
+          </div>
         </a>
         
         <div className={`${styles.navItems} ${mobileMenuOpen ? styles.mobileOpen : ''}`}>

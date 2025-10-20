@@ -81,27 +81,27 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="bg-gray-900 text-white py-12 pt-10">
+        <footer className="bg-gray-900 text-white" style={{padding: '10px 0'}}>
           <div className="container mx-auto px-6">
             {/* Основной контент футера */}
-            <div className="flex-footer items-center mb-8">
+            <div className="flex-footer items-center" style={{marginBottom: '-25px', height: 'calc(100% - 50px)', minHeight: '60px', lineHeight: '1.2'}}>
               {/* Левая часть: Логотип отцентрированный по отношению к заголовкам */}
               <div className="flex items-center space-x-4">
                 <img 
                   src="/nss-white-wave.png" 
                   alt={content.brand} 
-                  style={{width: '130px', height: '130px'}}
+                  style={{width: '60px', height: '60px'}}
                 />
                 <div>
-                  <h2 className="font-bold text-2xl mb-2">{content.brand}</h2>
-                  <p className="text-gray-400" style={{fontSize: '0.9rem'}}>{content.tagline}</p>
+                  <h2 className="font-bold text-lg mb-1" style={{fontSize: '1.2rem'}}>{content.brand}</h2>
+                  <p className="text-gray-400" style={{fontSize: '0.8rem'}}>{content.tagline}</p>
                 </div>
               </div>
               
               {/* Правая часть: Контактная информация */}
               <div className="text-right">
                 <h3 className="font-semibold mb-4">Contact Info</h3>
-                <div className="space-y-2 text-gray-400">
+                <div className="space-y-1 text-gray-400" style={{lineHeight: '1.2'}}>
                   <p>{content.contacts.email}</p>
                   <p>{content.contacts.phone}</p>
                   <p>{content.contacts.city}</p>
@@ -134,7 +134,7 @@ export default function RootLayout({
             </div>
             
             {/* Копирайт */}
-            <div className="border-t border-gray-800 pt-8 text-center">
+            <div className="border-t border-gray-800 text-center" style={{paddingTop: '5px'}}>
               <p>&copy; {currentYear} {content.brand}. All rights reserved.</p>
             </div>
           </div>

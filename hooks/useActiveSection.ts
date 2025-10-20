@@ -6,7 +6,7 @@ export function useActiveSection() {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
-    const sections = ['hero', 'benefits', 'services', 'process', 'areas', 'certifications', 'clients', 'contact'];
+    const sections = ['hero', 'about', 'services', 'benefits', 'areas', 'certifications', 'clients', 'contact'];
     
     const observer = new IntersectionObserver(
       (entries) => {
