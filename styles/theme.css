@@ -619,6 +619,13 @@
 
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
+  .sectionAreas {
+    background: transparent !important;
+    background-image: none !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+  
   .sectionAreas .container {
     flex-direction: column !important;
     min-height: auto !important;
@@ -660,6 +667,13 @@
 
 /* Маленькие телефоны (до 480px) */
 @media (max-width: 480px) {
+  .sectionAreas {
+    background: transparent !important;
+    background-image: none !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+  
   .sectionAreas .container {
     padding: 1.5rem 0.75rem !important;
   }

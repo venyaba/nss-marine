@@ -124,34 +124,36 @@ export default function HomePage() {
         <div className="container" style={{padding: '0'}}>
           <div className="text-center reveal">
             <h2 className="sectionTitle">About Us</h2>
-            <div className="reveal" style={{
+            <div className="revealScale" style={{
               margin: '32px auto 0',
               padding: '48px 40px',
               backgroundColor: 'transparent',
-              boxShadow: '0 2px 4px rgba(10, 37, 64, 0.3), 0 -1px 2px rgba(10, 37, 64, 0.2)',
-              position: 'relative'
+              boxShadow: '0 10px 40px rgba(0, 0, 0, 0.25)',
+              position: 'relative',
+              borderRadius: '8px',
+              border: '2px solid #0b1220'
             }}>
               <div style={{
                 position: 'absolute',
                 bottom: '-20px',
                 right: '-10px',
                 fontSize: '24px',
-                color: '#0a2540',
+                color: '#0b1220',
                 transform: 'rotate(15deg)',
                 zIndex: 10
               }}>
                 ⚓
               </div>
-              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: 'rgba(11, 18, 32, 1)'}}>
+              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: '#0b1220'}}>
                 Nautical Survey Solutions is an independent marine surveying company based in Hamburg, Germany, providing professional inspection services across European ports.
               </p>
-              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: 'rgba(11, 18, 32, 1)'}}>
+              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: '#0b1220'}}>
                 Our team consists of experienced Master Mariners and Marine Engineers with years of hands-on seagoing experience. This dual expertise allows us to deliver accurate, objective, and reliable assessments of vessel condition, cargo operations, and safety compliance.
               </p>
-              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: 'rgba(11, 18, 32, 1)'}}>
+              <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: '#0b1220'}}>
                 We specialize in bunker quantity verification, draft and condition surveys, cargo inspections, hold cleanliness checks, and pre-purchase surveys, ensuring every report meets the highest professional standards.
               </p>
-              <p style={{fontSize: '18px', lineHeight: '1.6', textAlign: 'justify', color: 'rgba(11, 18, 32, 1)'}}>
+              <p style={{fontSize: '18px', lineHeight: '1.6', textAlign: 'justify', color: '#0b1220'}}>
                 At Nautical Survey Solutions, we combine technical knowledge, practical experience, and transparency to provide experience you can trust.
               </p>
             </div>
