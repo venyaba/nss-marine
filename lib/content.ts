@@ -10,49 +10,49 @@ export const content = {
     {
       "title": "Draft Survey",
       "bullets": [
-        "Initial/Final readings",
-        "Trim & density corrections",
+        "Precise draft readings (initial & final)",
+        "Trim and density adjustments",
         "Signed report"
       ]
     },
     {
       "title": "Bunker Quantity Survey",
       "bullets": [
-        "Before/After sounding",
-        "ROB verification",
-        "SOF + photos"
+        "Before / After delivery soundings",
+        "ROB verification and fuel sampling",
+        "Signed report with photos"
       ]
     },
     {
       "title": "Holds Cleanliness Survey",
       "bullets": [
-        "Inspection & readiness",
-        "Residues/rust check",
-        "Photos + notes"
+        "Inspection for readiness and suitability",
+        "Residue, moisture, and rust control",
+        "Photos + inspection notes"
+      ]
+    },
+    {
+      "title": "On/Off-Hire Condition Survey",
+      "bullets": [
+        "ROB and bunker verification",
+        "Hull, deck, and cargo space inspection",
+        "Condition report with photos"
       ]
     },
     {
       "title": "Loading Survey",
       "bullets": [
-        "Pre-shipment condition",
-        "Damage/rust check",
-        "Report & docs"
+        "Pre-shipment cargo condition check",
+        "Sampling and contamination control",
+        "Report with photos and documents"
       ]
     },
     {
-      "title": "On/Off-Hire Bunker & Condition",
+      "title": "Pre-loading / Discharge Inspections",
       "bullets": [
-        "ROB check",
-        "Hull/deck overview",
-        "Condition notes"
-      ]
-    },
-    {
-      "title": "Iron Ore Loadings",
-      "bullets": [
-        "Moisture/density check",
-        "Sampling/records",
-        "Loading supervision"
+        "Cargo condition and quantity verification",
+        "Sampling and supervision of operations",
+        "Report with photos and measurements"
       ]
     }
   ],

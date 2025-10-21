@@ -108,7 +108,6 @@ export default function HomePage() {
       {/* Hero Section */}
       <section id="hero" className="heroWrap">
         <video className="heroVideo" autoPlay muted loop playsInline><source src="/videos/promo.MP4" type="video/mp4"/></video>
-        <div className="heroOverlay"></div>
         <div className="heroInner reveal">
           <h1 className="heroTitle">Nautical Survey Solutions</h1>
           <p className="heroLead">Independent marine & cargo surveys. Clear calculations. Fast reporting.</p>
@@ -194,13 +193,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-        <div className="wave"></div>
-      </section>
-
-      {/* Areas Section */}
-      <section id="areas" className="section sectionAreas">
-        <div className="container" style={{position: 'relative', display: 'flex', alignItems: 'center', minHeight: '400px'}}>
         </div>
         <div className="wave"></div>
       </section>
