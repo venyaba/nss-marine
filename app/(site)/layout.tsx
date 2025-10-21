@@ -81,7 +81,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="bg-gray-900 text-white" style={{padding: '10px 0'}}>
+        <footer className="text-white" style={{padding: '10px 0', backgroundColor: '#0B2A5B'}}>
           <div className="container mx-auto px-6">
             {/* Основной контент футера */}
             <div className="flex-footer items-center" style={{marginBottom: '-25px', height: 'calc(100% - 50px)', minHeight: '60px', lineHeight: '1.2'}}>

@@ -60,7 +60,7 @@
   background-image: url("/servicesareas.png");
   background-position: center calc(50% - 20px);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   padding:60px 0 !important;
   min-height:500px;
 }
@@ -191,7 +191,7 @@
 
 /* Стили карточек для светлых секций */
 .sectionLight .card{
-  background:rgba(11,18,32,0.9);
+  background:#0B2A5B;
   border:1px solid rgba(76,201,240,0.3);
   box-shadow:0 4px 16px rgba(11,37,69,0.12);
 }
@@ -208,7 +208,7 @@
   border-color:rgba(255,255,255,0.25);
 }
 .sectionLight .card:hover{
-  background:rgba(11,18,32,0.95);
+  background:#0B2A5B;
   border-color:rgba(76,201,240,0.6);
   box-shadow:0 8px 24px rgba(11,37,69,0.2);
 }
@@ -295,7 +295,7 @@
 
 .heroVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1.06) saturate(1.05)}
 
-.heroOverlay{position:absolute;inset:0;background:linear-gradient(180deg,#061227b0 0%,#06122780 45%,#061227cc 100%);}
+.heroOverlay{position:absolute;inset:0;background:linear-gradient(180deg,#06122760 0%,#06122740 45%,#06122780 100%);}
 
 .heroInner{position:relative;z-index:2;text-align:center;padding:0 16px;max-width:920px}
 
@@ -620,10 +620,29 @@
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
   .sectionAreas {
-    background: transparent !important;
-    background-image: none !important;
-    padding: 0 !important;
-    min-height: auto !important;
+    background: #ffffff !important;
+    background-image: url("/servicesareas.png") !important;
+    background-position: center calc(50% - 20px) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important;
+    padding: 60px 0 !important;
+    min-height: 500px !important;
+    overflow: hidden !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Дополнительно убираем отступы у родительских элементов */
+  .sectionAreas * {
+    box-sizing: border-box !important;
   }
   
   .sectionAreas .container {
@@ -668,10 +687,23 @@
 /* Маленькие телефоны (до 480px) */
 @media (max-width: 480px) {
   .sectionAreas {
-    background: transparent !important;
-    background-image: none !important;
-    padding: 0 !important;
-    min-height: auto !important;
+    background: #ffffff !important;
+    background-image: url("/servicesareas.png") !important;
+    background-position: center calc(50% - 20px) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important;
+    padding: 40px 0 !important;
+    min-height: 400px !important;
+    overflow: hidden !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
   }
   
   .sectionAreas .container {

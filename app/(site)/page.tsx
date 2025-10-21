@@ -120,30 +120,18 @@ export default function HomePage() {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="section sectionLight">
+      <section id="about" className="section sectionLight" style={{paddingTop: '20px'}}>
         <div className="container" style={{padding: '0'}}>
           <div className="text-center reveal">
-            <h2 className="sectionTitle">About Us</h2>
+            <h2 className="sectionTitle" style={{marginBottom: '0'}}>About Us</h2>
             <div className="revealScale" style={{
-              margin: '32px auto 0',
+              margin: '0 auto',
               padding: '48px 40px',
               backgroundColor: 'transparent',
-              boxShadow: '0 10px 40px rgba(0, 0, 0, 0.25)',
               position: 'relative',
-              borderRadius: '8px',
-              border: '2px solid #0b1220'
+              borderBottom: '1px solid #5BC0EB',
+              boxShadow: '0 4px 8px rgba(91, 192, 235, 0.3)'
             }}>
-              <div style={{
-                position: 'absolute',
-                bottom: '-20px',
-                right: '-10px',
-                fontSize: '24px',
-                color: '#0b1220',
-                transform: 'rotate(15deg)',
-                zIndex: 10
-              }}>
-                ⚓
-              </div>
               <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '24px', textAlign: 'justify', color: '#0b1220'}}>
                 Nautical Survey Solutions is an independent marine surveying company based in Hamburg, Germany, providing professional inspection services across European ports.
               </p>

@@ -21,7 +21,7 @@
 
 .card {
   padding: 32px;
-  background: rgba(11, 18, 32, 0.9) !important;
+  background: #0B2A5B !important;
   border: 1px solid rgba(255,255,255,0.12) !important;
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2) !important;
@@ -36,7 +36,7 @@
   transform: none !important;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2) !important;
   border-color: rgba(255,255,255,0.12) !important;
-  background: rgba(11, 18, 32, 0.95) !important;
+  background: #0B2A5B !important;
 }
 
 .linkedinIcon {
