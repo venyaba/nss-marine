@@ -94,7 +94,15 @@ export default function RootLayout({
                 />
                 <div>
                   <h2 className="font-bold text-lg mb-1" style={{fontSize: '1.2rem'}}>{content.brand}</h2>
-                  <p className="text-gray-400" style={{fontSize: '0.8rem'}}>{content.tagline}</p>
+                  <p className="text-gray-400 footer-tagline" style={{
+                    fontSize: '0.8rem',
+                    textAlign: 'center',
+                    position: 'relative',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem'
+                  }}>{content.tagline}</p>
                 </div>
               </div>
               
