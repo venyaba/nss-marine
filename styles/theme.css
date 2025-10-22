@@ -94,6 +94,11 @@
 .sectionLight .sectionTitle{color:#0a2540;}
 .sectionLight .sectionSub{color:#4a7c9d;}
 
+/* Базовые отступы для голубой линии в секции About Us */
+.sectionLight .revealScale {
+  padding: 48px 40px;
+}
+
 .sectionBlue{background:linear-gradient(180deg,#0b2545 0%,#0a1f3b 100%);}
 
 .sectionTeam{
@@ -501,6 +506,16 @@
 
 /* Планшеты (768px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
+  /* Отступы для голубой линии в секции About Us на планшетах */
+  .sectionLight .revealScale {
+    padding: 32px 24px !important;
+  }
+  
+  /* Отступы для самой рамки с текстом в секции About Us на планшетах */
+  .sectionLight .revealScale {
+    margin: 0 24px !important;
+  }
+  
   .flex-footer {
     padding-top: 30px;
     gap: 3rem;
@@ -522,21 +537,31 @@
 
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
-  /* Заголовки на мобильных остаются без центрирования */
+  /* Центрирование заголовков секций на мобильных */
   .sectionTitle {
-    text-align: left !important;
+    text-align: center !important;
   }
   
   .sectionSub {
-    text-align: left !important;
+    text-align: center !important;
   }
   
   .heroTitle {
-    text-align: left !important;
+    text-align: center !important;
   }
   
   .heroLead {
-    text-align: left !important;
+    text-align: center !important;
+  }
+  
+  /* Отступы для голубой линии в секции About Us на мобильных */
+  .sectionLight .revealScale {
+    padding: 24px 16px !important;
+  }
+  
+  /* Отступы для самой рамки с текстом в секции About Us на мобильных */
+  .sectionLight .revealScale {
+    margin: 0 16px !important;
   }
   
   /* Принудительное добавление голубой линии при hover в мобильном меню */
@@ -545,17 +570,26 @@
     position: absolute !important;
     bottom: 0 !important;
     left: 50% !important;
-    width: 0 !important;
+    right: 50% !important;
     height: 2px !important;
-    background: #5BC0EB !important;
-    transition: all 0.3s ease !important;
-    transform: translateX(-50%) !important;
+    background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
+    border-radius: 2px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    opacity: 0 !important;
     z-index: 1 !important;
   }
-  
+
+  .navItems .navLink:hover {
+    color: #5BC0EB !important;
+    text-shadow: 0 0 20px rgba(91, 192, 235, 0.4) !important;
+    transform: translateY(-2px) !important;
+  }
+
   .navItems .navLink:hover::before {
-    width: 100% !important;
-    background: #5BC0EB !important;
+    left: 0 !important;
+    right: 0 !important;
+    opacity: 1 !important;
+    background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
   }
   
   /* КРИТИЧЕСКИ ВАЖНО: Принудительное добавление голубой линии */
@@ -564,17 +598,26 @@
     position: absolute !important;
     bottom: 0 !important;
     left: 50% !important;
-    width: 0 !important;
+    right: 50% !important;
     height: 2px !important;
-    background: #5BC0EB !important;
-    transition: all 0.3s ease !important;
-    transform: translateX(-50%) !important;
+    background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
+    border-radius: 2px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    opacity: 0 !important;
     z-index: 1 !important;
   }
-  
+
+  .navItems.mobileOpen .navLink:hover {
+    color: #5BC0EB !important;
+    text-shadow: 0 0 20px rgba(91, 192, 235, 0.4) !important;
+    transform: translateY(-2px) !important;
+  }
+
   .navItems.mobileOpen .navLink:hover::before {
-    width: 100% !important;
-    background: #5BC0EB !important;
+    left: 0 !important;
+    right: 0 !important;
+    opacity: 1 !important;
+    background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
   }
   
   .flex-footer {

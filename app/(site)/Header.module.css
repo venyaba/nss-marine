@@ -403,7 +403,6 @@
   }
   
   .navLink.active {
-    background-color: rgba(76, 201, 240, 0.15);
     color: var(--primary) !important;
   }
   
@@ -467,7 +466,7 @@
   display: none !important;
 }
 
-/* Принудительное добавление голубой линии при hover */
+/* Голубая линия от центра в стороны при hover */
 .navItems .navLink::before {
   content: '' !important;
   position: absolute !important;
@@ -475,32 +474,148 @@
   left: 50% !important;
   width: 0 !important;
   height: 2px !important;
-  background: #5BC0EB !important;
-  transition: all 0.3s ease !important;
+  background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
+  border-radius: 2px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   transform: translateX(-50%) !important;
   z-index: 1 !important;
 }
 
 .navItems .navLink:hover::before {
   width: 100% !important;
-  background: #5BC0EB !important;
+  background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
 }
 
-/* КРИТИЧЕСКИ ВАЖНО: Принудительное добавление голубой линии */
+/* Эффект hover точно как в десктопном хедере для мобильного меню */
 .navItems.mobileOpen .navLink::before {
   content: '' !important;
   position: absolute !important;
   bottom: 0 !important;
   left: 50% !important;
-  width: 0 !important;
+  right: 50% !important;
   height: 2px !important;
-  background: #5BC0EB !important;
-  transition: all 0.3s ease !important;
-  transform: translateX(-50%) !important;
+  background: linear-gradient(90deg, var(--primary), #7bd6ff) !important;
+  border-radius: 2px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 0 !important;
   z-index: 1 !important;
 }
 
+.navItems.mobileOpen .navLink:hover {
+  color: var(--primary) !important;
+  text-shadow: 0 0 20px rgba(76, 201, 240, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
 .navItems.mobileOpen .navLink:hover::before {
+  left: 0 !important;
+  right: 0 !important;
+  opacity: 1 !important;
+  background: linear-gradient(90deg, var(--primary), #7bd6ff) !important;
+}
+
+/* Убираем голубую линию для первого элемента меню */
+.navItems.mobileOpen .navLink:first-child::before {
+  display: none !important;
+  content: none !important;
+}
+
+.navItems.mobileOpen .navLink:first-child:hover::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Дополнительная защита от голубого квадрата на первом элементе */
+.navItems.mobileOpen .navLink:first-child {
+  position: relative !important;
+}
+
+.navItems.mobileOpen .navLink:first-child::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Убираем голубой квадрат для активного первого элемента */
+.navItems.mobileOpen .navLink:first-child.active::before {
+  display: none !important;
+  content: none !important;
+}
+
+.navItems.mobileOpen .navLink:first-child.active::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Дополнительные стили для гарантии применения hover эффекта */
+.navItems.mobileOpen .navLink {
+  position: relative !important;
+  overflow: hidden !important;
+  display: block !important;
   width: 100% !important;
-  background: #5BC0EB !important;
+  text-align: center !important;
+}
+
+/* Новый класс для мобильного меню с hover эффектом */
+.mobileNavLink {
+  position: relative !important;
+  overflow: hidden !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.mobileNavLink::before {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  right: 50% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
+  border-radius: 2px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 0 !important;
+  z-index: 1 !important;
+}
+
+.mobileNavLink:hover {
+  color: #5BC0EB !important;
+  text-shadow: 0 0 20px rgba(91, 192, 235, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.mobileNavLink:hover::before {
+  left: 0 !important;
+  right: 0 !important;
+  opacity: 1 !important;
+  background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
+}
+
+/* Принудительные стили для мобильного меню с максимальной специфичностью */
+.navItems.mobileOpen .navLink::before {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  right: 50% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
+  border-radius: 2px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 0 !important;
+  z-index: 1 !important;
+}
+
+.navItems.mobileOpen .navLink:hover {
+  color: #5BC0EB !important;
+  text-shadow: 0 0 20px rgba(91, 192, 235, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+.navItems.mobileOpen .navLink:hover::before {
+  left: 0 !important;
+  right: 0 !important;
+  opacity: 1 !important;
+  background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
 }

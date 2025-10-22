@@ -74,7 +74,11 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               style={{
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                display: 'block',
+                width: '100%',
+                textAlign: 'center',
+                transition: 'all 0.3s ease'
               }}
             >
               {item.label}

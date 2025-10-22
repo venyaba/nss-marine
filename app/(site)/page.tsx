@@ -125,7 +125,6 @@ export default function HomePage() {
             <h2 className="sectionTitle" style={{marginBottom: '0'}}>About Us</h2>
             <div className="revealScale" style={{
               margin: '0 auto',
-              padding: '48px 40px',
               backgroundColor: 'transparent',
               position: 'relative',
               borderBottom: '1px solid #5BC0EB',
