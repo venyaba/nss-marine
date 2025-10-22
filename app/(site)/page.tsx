@@ -156,6 +156,23 @@ export default function HomePage() {
             <h2 className="sectionTitle" style={{marginBottom: '10px'}}>Our Services</h2>
             <p className="sectionSub" style={{marginTop: '0', color: '#0a2540'}}>Comprehensive marine survey solutions</p>
           </div>
+          <div className="revealScale" style={{
+            margin: '0 auto',
+            padding: '32px 40px',
+            backgroundColor: 'transparent',
+            position: 'relative',
+            borderBottom: '1px solid #5BC0EB',
+            boxShadow: '0 4px 8px rgba(91, 192, 235, 0.3)',
+            marginTop: '32px',
+            borderRadius: '12px'
+          }}>
+            <p style={{fontSize: '18px', lineHeight: '1.6', marginBottom: '16px', textAlign: 'center', color: '#0b1220'}}>
+              Nautical Survey Solutions provides a full range of marine surveying and inspection services.
+            </p>
+            <p style={{fontSize: '18px', lineHeight: '1.6', textAlign: 'center', color: '#0b1220'}}>
+              Each attendance is performed with precision, consistency, and commitment to the highest industry standards.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style={{marginTop: '32px', paddingTop: '32px'}}>
             {content.services.map((service, index) => (
               <div key={index} className="card p-8 revealRight" style={{transitionDelay: `${index * 0.15}s`}}>
@@ -184,9 +201,24 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
             {content.benefits.map((benefit, index) => (
-              <div key={index} className="card p-8 text-center revealRight" style={{transitionDelay: `${index * 0.15}s`}}>
+              <div 
+                key={index} 
+                className="card benefits-card p-8 text-center revealRight" 
+                style={{
+                  transitionDelay: `${index * 0.15}s`,
+                  transform: 'none',
+                  transition: 'none',
+                  pointerEvents: 'none'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'none';
+                  e.currentTarget.style.boxShadow = 'var(--shadow)';
+                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)';
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                }}
+              >
                 <div className="iconBadge mx-auto mb-4">
-                  <span className="text-2xl">⚓</span>
+                  <span className="text-2xl">{benefit.icon}</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-muted">{benefit.text}</p>

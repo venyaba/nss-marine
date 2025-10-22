@@ -8,69 +8,84 @@ export const content = {
   },
   "services": [
     {
-      "title": "Draft Survey",
+      "title": "Bunker Quantity Surveys (BQS)",
       "bullets": [
-        "Precise draft readings (initial & final)",
-        "Trim and density adjustments",
-        "Signed report"
+        "Independent verification of fuel quantities on board before and after bunkering",
+        "Measurements are taken with calibrated equipment",
+        "Results are issued as a signed report immediately upon completion"
       ]
     },
     {
-      "title": "Bunker Quantity Survey",
+      "title": "Draft Surveys",
       "bullets": [
-        "Before / After delivery soundings",
-        "ROB verification and fuel sampling",
-        "Signed report with photos"
+        "Accurate determination of cargo weight based on vessel displacement",
+        "Conducted before and after loading or discharge",
+        "In accordance with international standards for reliable and verifiable results"
       ]
     },
     {
-      "title": "Holds Cleanliness Survey",
+      "title": "On/Off-Hire Condition Surveys",
       "bullets": [
-        "Inspection for readiness and suitability",
-        "Residue, moisture, and rust control",
-        "Photos + inspection notes"
+        "Assessment of vessel condition and inventories",
+        "At the commencement or completion of a charter",
+        "Comprehensive photo-supported reports safeguard interests of both owners and charterers"
       ]
     },
     {
-      "title": "On/Off-Hire Condition Survey",
+      "title": "Cargo Inspections",
       "bullets": [
-        "ROB and bunker verification",
-        "Hull, deck, and cargo space inspection",
-        "Condition report with photos"
+        "Monitoring of cargo condition, handling, and compliance with contractual requirements",
+        "All findings are documented through photographs and measurements",
+        "Remarks on any irregularities are included"
       ]
     },
     {
-      "title": "Loading Survey",
+      "title": "Pre-Loading and Discharge Inspections",
       "bullets": [
-        "Pre-shipment cargo condition check",
-        "Sampling and contamination control",
-        "Report with photos and documents"
+        "Supervision of loading and discharging operations",
+        "Sampling and visual control",
+        "Ensures cargo integrity, proper stowage, and adherence to agreed procedures"
       ]
     },
     {
-      "title": "Pre-loading / Discharge Inspections",
+      "title": "Bunker Surveys",
       "bullets": [
-        "Cargo condition and quantity verification",
-        "Sampling and supervision of operations",
-        "Report with photos and measurements"
+        "Verification of fuel delivery quantities and vessel consumption records",
+        "Performed by experienced surveyors",
+        "Maintains transparency and accuracy throughout operations"
       ]
     }
   ],
   "benefits": [
     {
-      "icon": "compass",
-      "title": "24/7 attendance",
-      "text": "Rapid mobilization across regional ports"
+      "icon": "⚓",
+      "title": "Experienced Surveyors",
+      "text": "Qualified and certified marine surveyors with extensive background in cargo, bunker, and condition inspections. Each attendance is handled with precision and professional integrity."
     },
     {
-      "icon": "shield",
-      "title": "Independent reporting",
-      "text": "Clear photos, findings and calculations"
+      "icon": "⚙️",
+      "title": "Operational Reliability",
+      "text": "Consistent service standards and dependable performance in every port. Our procedures ensure uniform quality and verifiable results."
     },
     {
-      "icon": "clock",
-      "title": "On-time delivery",
-      "text": "Preliminary notes same day"
+      "icon": "📏",
+      "title": "Accuracy & Transparency",
+      "text": "All measurements are performed with attention to detail and documented with full traceability. Reports reflect accurate data and impartial assessment."
+    },
+    {
+      "icon": "📄",
+      "title": "Comprehensive Reporting",
+      "text": "Clear, concise, and structured reports supported by photo documentation. Delivered promptly and formatted for operational use."
+    },
+    {
+      "icon": "🚢",
+      "title": "Efficiency & Availability",
+      "text": "24/7 readiness and swift coordination for urgent attendances. Flexible scheduling and efficient execution without delays."
+    },
+    {
+      "icon": "🤝",
+      "title": "Client-Focused Approach",
+      "text": "Responsive communication and individual attention to each case. We value long-term cooperation built on trust and reliability."
     }
   ],
   "process": [

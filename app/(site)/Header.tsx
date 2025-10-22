@@ -72,6 +72,10 @@ export default function Header() {
                 activeSection === item.href.slice(1) ? styles.active : ''
               }`}
               onClick={() => setMobileMenuOpen(false)}
+              style={{
+                position: 'relative',
+                overflow: 'hidden'
+              }}
             >
               {item.label}
             </a>
@@ -84,7 +88,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Close menu"
             >
-              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>

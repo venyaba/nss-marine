@@ -220,11 +220,56 @@
   color:#ffffff;
 }
 
+/* Полное отключение hover эффектов для карточек benefits */
+.sectionLight .benefits-card {
+  transform: none !important;
+  transition: none !important;
+}
+.sectionLight .benefits-card:hover {
+  transform: none !important;
+  box-shadow: var(--shadow) !important;
+  border-color: rgba(255,255,255,0.12) !important;
+  background: rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(8px) !important;
+}
+.sectionLight .benefits-card:hover h1,.sectionLight .benefits-card:hover h2,.sectionLight .benefits-card:hover h3,.sectionLight .benefits-card:hover h4,.sectionLight .benefits-card:hover h5,.sectionLight .benefits-card:hover h6{
+  color: inherit !important;
+  text-shadow: none !important;
+}
+.sectionLight .benefits-card:hover p,.sectionLight .benefits-card:hover span,.sectionLight .benefits-card:hover li,.sectionLight .benefits-card:hover a{
+  color: inherit !important;
+}
+
+
 .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid #ffffff2a;font-weight:600;transition:.3s;}
 
 .btnPrimary{background:#031a2b;color:#e6edf6;transition:background 0.3s ease, color 0.3s ease;}
 
 .btnPrimary:hover{background:#e6edf6;color:#031a2b;}
+
+/* КРИТИЧЕСКИ ВАЖНО: Отключение hover для карточек benefits */
+.sectionLight .benefits-card:hover {
+  transform: none !important;
+  box-shadow: var(--shadow) !important;
+  border-color: rgba(255,255,255,0.12) !important;
+  background: rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(8px) !important;
+}
+.sectionLight .benefits-card:hover h1,
+.sectionLight .benefits-card:hover h2,
+.sectionLight .benefits-card:hover h3,
+.sectionLight .benefits-card:hover h4,
+.sectionLight .benefits-card:hover h5,
+.sectionLight .benefits-card:hover h6 {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+.sectionLight .benefits-card:hover p,
+.sectionLight .benefits-card:hover span,
+.sectionLight .benefits-card:hover li,
+.sectionLight .benefits-card:hover a {
+  color: inherit !important;
+}
 
 .btnGhost{background:transparent;color:var(--text)}
 
@@ -477,6 +522,61 @@
 
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
+  /* Заголовки на мобильных остаются без центрирования */
+  .sectionTitle {
+    text-align: left !important;
+  }
+  
+  .sectionSub {
+    text-align: left !important;
+  }
+  
+  .heroTitle {
+    text-align: left !important;
+  }
+  
+  .heroLead {
+    text-align: left !important;
+  }
+  
+  /* Принудительное добавление голубой линии при hover в мобильном меню */
+  .navItems .navLink::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 2px !important;
+    background: #5BC0EB !important;
+    transition: all 0.3s ease !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+  }
+  
+  .navItems .navLink:hover::before {
+    width: 100% !important;
+    background: #5BC0EB !important;
+  }
+  
+  /* КРИТИЧЕСКИ ВАЖНО: Принудительное добавление голубой линии */
+  .navItems.mobileOpen .navLink::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 2px !important;
+    background: #5BC0EB !important;
+    transition: all 0.3s ease !important;
+    transform: translateX(-50%) !important;
+    z-index: 1 !important;
+  }
+  
+  .navItems.mobileOpen .navLink:hover::before {
+    width: 100% !important;
+    background: #5BC0EB !important;
+  }
+  
   .flex-footer {
     flex-direction: column;
     align-items: center !important;

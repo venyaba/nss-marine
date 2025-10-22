@@ -134,6 +134,7 @@
 
 .mobileMenu {
   display: none;
+  margin-left: auto;
 }
 
 .mobileButton {
@@ -170,26 +171,31 @@
   .closeButton {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     color: #ffffff;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0;
     border-radius: 50%;
     transition: all 0.3s ease;
     z-index: 101;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .closeButton:hover {
     color: var(--primary);
     background: rgba(76, 201, 240, 0.2);
-    transform: rotate(90deg);
+    transform: scale(1.1);
   }
   
   .closeButton:active {
-    transform: rotate(180deg) scale(0.95);
+    transform: scale(0.95);
   }
 }
 
@@ -226,31 +232,41 @@
   
   .mobileMenu {
     display: block;
+    margin-left: auto;
   }
   
   /* Применяем боковое меню справа для планшетов */
   .navItems {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 320px;
-    background: rgba(11, 18, 32, 1);
-    backdrop-filter: blur(12px);
-    flex-direction: column;
-    justify-content: center;
-    gap: 0;
-    padding: 14rem 0 9rem;
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 100;
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
-    overflow: visible;
+    position: fixed !important;
+    top: 50vh !important;
+    left: 50vw !important;
+    transform: translate(-50%, -50%) scale(0) !important;
+    width: 300px !important;
+    max-width: 90vw !important;
+    background: rgba(11, 42, 91, 0.9) !important;
+    border-radius: 16px !important;
+    padding: 2rem !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
+    z-index: 1000 !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
   }
   
   .navItems.mobileOpen {
-    transform: translateX(0);
-    display: flex;
+    transform: translate(-50%, -50%) scale(1) !important;
+    opacity: 1 !important;
+    display: flex !important;
   }
   
   .navLink {
@@ -261,11 +277,34 @@
     opacity: 1;
     transform: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .navLink::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    right: 50% !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, var(--primary), #7bd6ff) !important;
+    border-radius: 2px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    opacity: 0 !important;
+    z-index: 1 !important;
   }
   
   .navLink:hover {
-    background-color: rgba(76, 201, 240, 0.1);
     color: var(--primary) !important;
+    text-shadow: 0 0 20px rgba(76, 201, 240, 0.4) !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .navLink:hover::before {
+    left: 0 !important;
+    right: 0 !important;
+    opacity: 1 !important;
   }
   
   .navLink::before {
@@ -280,33 +319,48 @@
   }
   
   .nav {
+    justify-content: space-between !important;
+  }
+  
+  .logo {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  
+  .nav {
     padding: 0 1rem;
   }
   
   .navItems {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 45%;
-    min-width: 280px;
-    max-width: 400px;
-    background: rgba(11, 18, 32, 1);
-    backdrop-filter: blur(12px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 0;
-    padding: 14rem 0 9rem;
-    transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 100;
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
-    overflow: visible;
+    position: fixed !important;
+    top: 50vh !important;
+    left: 50vw !important;
+    transform: translate(-50%, -50%) scale(0) !important;
+    width: 300px !important;
+    max-width: 90vw !important;
+    background: rgba(11, 42, 91, 0.9) !important;
+    border-radius: 16px !important;
+    padding: 2rem !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    transition: transform 0.3s ease, opacity 0.3s ease !important;
+    z-index: 1000 !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
   }
   
   .navItems.mobileOpen {
-    transform: translateX(0);
+    transform: translate(-50%, -50%) scale(1) !important;
+    opacity: 1 !important;
   }
   
   .navLink {
@@ -319,13 +373,33 @@
     transition: background-color 0.2s ease, color 0.2s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
+    position: relative;
+  }
+  
+  .navLink::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    right: 50% !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, var(--primary), #7bd6ff) !important;
+    border-radius: 2px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    opacity: 0 !important;
+    z-index: 1 !important;
   }
   
   .navLink:hover {
-    background-color: rgba(76, 201, 240, 0.1);
     color: var(--primary) !important;
-    transform: none;
-    text-shadow: none;
+    text-shadow: 0 0 20px rgba(76, 201, 240, 0.4) !important;
+    transform: translateY(-2px) !important;
+  }
+  
+  .navLink:hover::before {
+    left: 0 !important;
+    right: 0 !important;
+    opacity: 1 !important;
   }
   
   .navLink.active {
@@ -340,6 +414,7 @@
   
   .mobileMenu {
     display: block;
+    margin-left: auto;
   }
   
   .logoImage {
@@ -385,4 +460,47 @@
     font-size: 1.05rem !important;
     padding: 1.15rem 1.5rem !important;
   }
+}
+
+/* Скрываем бургер-меню когда модальное окно открыто */
+.navItems.mobileOpen ~ .mobileMenu {
+  display: none !important;
+}
+
+/* Принудительное добавление голубой линии при hover */
+.navItems .navLink::before {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: #5BC0EB !important;
+  transition: all 0.3s ease !important;
+  transform: translateX(-50%) !important;
+  z-index: 1 !important;
+}
+
+.navItems .navLink:hover::before {
+  width: 100% !important;
+  background: #5BC0EB !important;
+}
+
+/* КРИТИЧЕСКИ ВАЖНО: Принудительное добавление голубой линии */
+.navItems.mobileOpen .navLink::before {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: #5BC0EB !important;
+  transition: all 0.3s ease !important;
+  transform: translateX(-50%) !important;
+  z-index: 1 !important;
+}
+
+.navItems.mobileOpen .navLink:hover::before {
+  width: 100% !important;
+  background: #5BC0EB !important;
 }
