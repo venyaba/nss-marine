@@ -225,24 +225,10 @@
   color:#ffffff;
 }
 
-/* Полное отключение hover эффектов для карточек benefits */
+/* Стили для карточек benefits без hover эффектов */
 .sectionLight .benefits-card {
   transform: none !important;
   transition: none !important;
-}
-.sectionLight .benefits-card:hover {
-  transform: none !important;
-  box-shadow: var(--shadow) !important;
-  border-color: rgba(255,255,255,0.12) !important;
-  background: rgba(255,255,255,0.08) !important;
-  backdrop-filter: blur(8px) !important;
-}
-.sectionLight .benefits-card:hover h1,.sectionLight .benefits-card:hover h2,.sectionLight .benefits-card:hover h3,.sectionLight .benefits-card:hover h4,.sectionLight .benefits-card:hover h5,.sectionLight .benefits-card:hover h6{
-  color: inherit !important;
-  text-shadow: none !important;
-}
-.sectionLight .benefits-card:hover p,.sectionLight .benefits-card:hover span,.sectionLight .benefits-card:hover li,.sectionLight .benefits-card:hover a{
-  color: inherit !important;
 }
 
 
@@ -252,29 +238,6 @@
 
 .btnPrimary:hover{background:#e6edf6;color:#031a2b;}
 
-/* КРИТИЧЕСКИ ВАЖНО: Отключение hover для карточек benefits */
-.sectionLight .benefits-card:hover {
-  transform: none !important;
-  box-shadow: var(--shadow) !important;
-  border-color: rgba(255,255,255,0.12) !important;
-  background: rgba(255,255,255,0.08) !important;
-  backdrop-filter: blur(8px) !important;
-}
-.sectionLight .benefits-card:hover h1,
-.sectionLight .benefits-card:hover h2,
-.sectionLight .benefits-card:hover h3,
-.sectionLight .benefits-card:hover h4,
-.sectionLight .benefits-card:hover h5,
-.sectionLight .benefits-card:hover h6 {
-  color: inherit !important;
-  text-shadow: none !important;
-}
-.sectionLight .benefits-card:hover p,
-.sectionLight .benefits-card:hover span,
-.sectionLight .benefits-card:hover li,
-.sectionLight .benefits-card:hover a {
-  color: inherit !important;
-}
 
 .btnGhost{background:transparent;color:var(--text)}
 
@@ -607,18 +570,6 @@
     z-index: 1 !important;
   }
 
-  .navItems.mobileOpen .navLink:hover {
-    color: #5BC0EB !important;
-    text-shadow: 0 0 20px rgba(91, 192, 235, 0.4) !important;
-    transform: translateY(-2px) !important;
-  }
-
-  .navItems.mobileOpen .navLink:hover::before {
-    left: 0 !important;
-    right: 0 !important;
-    opacity: 1 !important;
-    background: linear-gradient(90deg, #5BC0EB, #7bd6ff) !important;
-  }
   
   .flex-footer {
     flex-direction: column;

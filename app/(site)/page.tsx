@@ -204,16 +204,7 @@ export default function HomePage() {
                 key={index} 
                 className="card benefits-card p-8 text-center revealRight" 
                 style={{
-                  transitionDelay: `${index * 0.15}s`,
-                  transform: 'none',
-                  transition: 'none',
-                  pointerEvents: 'none'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'none';
-                  e.currentTarget.style.boxShadow = 'var(--shadow)';
-                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)';
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                  transitionDelay: `${index * 0.15}s`
                 }}
               >
                 <div className="iconBadge mx-auto mb-4">

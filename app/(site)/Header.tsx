@@ -63,6 +63,14 @@ export default function Header() {
           </div>
         </a>
         
+        {/* Backdrop для закрытия меню при клике */}
+        {mobileMenuOpen && (
+          <div 
+            className={styles.backdrop}
+            onClick={() => setMobileMenuOpen(false)}
+          />
+        )}
+        
         <div className={`${styles.navItems} ${mobileMenuOpen ? styles.mobileOpen : ''}`}>
           {navItems.map((item) => (
             <a
@@ -74,7 +82,6 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               style={{
                 position: 'relative',
-                overflow: 'hidden',
                 display: 'block',
                 width: '100%',
                 textAlign: 'center',
